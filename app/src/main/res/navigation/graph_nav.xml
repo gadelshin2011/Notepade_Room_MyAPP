@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_nav"
+    app:startDestination="@id/startNewsFragment2">
+
+    <fragment
+        android:id="@+id/startNoteFragment"
+        android:name="com.example.notepade_room_myapp.screens.notebook.start_note_screen.StartNoteFragment"
+        android:label="fragment_start_note"
+        tools:layout="@layout/fragment_start_note" >
+        <action
+            android:id="@+id/action_startNoteFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+        <action
+            android:id="@+id/action_startNoteFragment_to_detailNoteFragment"
+            app:destination="@id/detailNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.example.notepade_room_myapp.screens.notebook.add_note_screen.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" >
+        <action
+            android:id="@+id/action_addNoteFragment_to_startNoteFragment"
+            app:destination="@id/startNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailNoteFragment"
+        android:name="com.example.notepade_room_myapp.screens.notebook.detail_note_screen.DetailNoteFragment"
+        android:label="fragment_detail_note"
+        tools:layout="@layout/fragment_detail_note" >
+        <action
+            android:id="@+id/action_detailNoteFragment_to_startNoteFragment"
+            app:destination="@id/startNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startNewsFragment2"
+        android:name="com.example.notepade_room_myapp.screens.news.start_notes_screen.StartNewsFragment"
+        android:label="fragment_start_news"
+        tools:layout="@layout/fragment_start_news" >
+        <action
+            android:id="@+id/action_startNewsFragment2_to_openNewsFragment2"
+            app:destination="@id/openNewsFragment2" />
+        <action
+            android:id="@+id/action_startNewsFragment2_to_savedNewsFragment"
+            app:destination="@id/savedNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/openNewsFragment2"
+        android:name="com.example.notepade_room_myapp.screens.news.open_news_screen.OpenNewsFragment"
+        android:label="fragment_open_news"
+        tools:layout="@layout/fragment_open_news" >
+        <action
+            android:id="@+id/action_openNewsFragment2_to_startNewsFragment2"
+            app:destination="@id/startNewsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedNewsFragment"
+        android:name="com.example.notepade_room_myapp.screens.news.saved_news_screen.SavedNewsFragment"
+        android:label="fragment_saved_news"
+        tools:layout="@layout/fragment_saved_news" >
+        <action
+            android:id="@+id/action_savedNewsFragment_to_startNewsFragment2"
+            app:destination="@id/startNewsFragment2" />
+    </fragment>
+</navigation>

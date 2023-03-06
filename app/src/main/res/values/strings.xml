@@ -2,4 +2,13 @@
     <string name="app_name">Notepade_Room_MyAPP</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="news">News</string>
+    <string name="notes">Notes</string>
+    <string name="profile">Profile</string>
+    <string name="description_news">Description news</string>
+    <string name="title">Title</string>
+    <string name="add_notes">Add Notes</string>
+    <string name="description_notes">Description</string>
+    <string name="add_note_title">Title</string>
+    <string name="add_note_description">Description</string>
 </resources>
