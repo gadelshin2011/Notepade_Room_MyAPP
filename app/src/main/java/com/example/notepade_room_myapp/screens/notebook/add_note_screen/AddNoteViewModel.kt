@@ -9,6 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class AddNoteViewModel:ViewModel() {
+
     fun insert(noteModel: NoteModel, onSuccess:() ->Unit){
         viewModelScope.launch(Dispatchers.IO) {
             REPOSITORY.insertNote(noteModel){

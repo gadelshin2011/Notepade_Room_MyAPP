@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.notepade_room_myapp.APP
 import com.example.notepade_room_myapp.R
@@ -18,7 +17,7 @@ class AddNoteFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAddNoteBinding.inflate(layoutInflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
@@ -31,16 +30,16 @@ class AddNoteFragment : Fragment() {
     }
 
     private fun init() {
-        var viewModel = ViewModelProvider(this).get(AddNoteViewModel::class.java)
+        val viewModel = ViewModelProvider(this)[AddNoteViewModel::class.java]
 
         binding.fbAddNote.setOnClickListener {
 
             val title = binding.edAddTitle.text.toString()
             val desc = binding.edAddDescription.text.toString()
 
-            viewModel.insert(NoteModel(title = title, description = desc)) {
-                APP.navController.navigate(R.id.action_addNoteFragment_to_startNoteFragment)
-            }
+            viewModel.insert(NoteModel(title = title, description = desc)) {}
+            APP.navController.navigate(R.id.action_addNoteFragment_to_startNoteFragment)
+
 
         }
 

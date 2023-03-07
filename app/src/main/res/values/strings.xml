@@ -11,4 +11,5 @@
     <string name="description_notes">Description</string>
     <string name="add_note_title">Title</string>
     <string name="add_note_description">Description</string>
+    <string name="profile_tvName">Profile</string>
 </resources>

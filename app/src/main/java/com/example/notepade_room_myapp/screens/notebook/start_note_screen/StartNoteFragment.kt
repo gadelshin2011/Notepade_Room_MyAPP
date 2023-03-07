@@ -10,6 +10,7 @@ import com.example.notepade_room_myapp.APP
 import com.example.notepade_room_myapp.R
 import com.example.notepade_room_myapp.adapter.NoteAdapter
 import com.example.notepade_room_myapp.databinding.FragmentStartNoteBinding
+import com.example.notepade_room_myapp.model.NoteModel
 
 
 class StartNoteFragment : Fragment() {
@@ -47,6 +48,16 @@ class StartNoteFragment : Fragment() {
         }
 
     }
+    companion object{
+        fun clickNote(noteModel: NoteModel){
+            val bundle = Bundle()
+            bundle.putSerializable("note", noteModel)
+
+            APP.navController.navigate(R.id.action_startNoteFragment_to_detailNoteFragment, bundle)
+        }
+    }
+
+
 
 
 }

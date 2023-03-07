@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_startNoteFragment_to_detailNoteFragment"
             app:destination="@id/detailNoteFragment" />
+        <action
+            android:id="@+id/action_startNoteFragment_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
     </fragment>
     <fragment
         android:id="@+id/addNoteFragment"
@@ -46,6 +49,9 @@
         <action
             android:id="@+id/action_startNewsFragment2_to_savedNewsFragment"
             app:destination="@id/savedNewsFragment" />
+        <action
+            android:id="@+id/action_startNewsFragment2_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
     </fragment>
     <fragment
         android:id="@+id/openNewsFragment2"
@@ -64,5 +70,17 @@
         <action
             android:id="@+id/action_savedNewsFragment_to_startNewsFragment2"
             app:destination="@id/startNewsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.notepade_room_myapp.screens.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_startNewsFragment2"
+            app:destination="@id/startNewsFragment2" />
+        <action
+            android:id="@+id/action_profileFragment2_to_startNoteFragment"
+            app:destination="@id/startNoteFragment" />
     </fragment>
 </navigation>

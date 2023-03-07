@@ -15,4 +15,4 @@ data class NoteModel(
     @ColumnInfo
     val description: String = ""
 
-):java.io.Serializable
+) : java.io.Serializable
